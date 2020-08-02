@@ -15,4 +15,17 @@ function save(){
     //ids for each row and pull /tags
     //styling
 
-//console.log(event.target)
+$("#currentDay").text(moment().format('dddd')+", "+ moment().format('MMMM Do'));  
+
+// m = moment('2013-03-01', 'YYYY-MM-DD')
+// var dt = new Date();
+// var daytime = dt.getDay() + " " + dt.getMonth() + " " + dt.getDate();
+// var time = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
+// console.log(moment());
+
+
+console.log(moment)
+// var today = new Date();
+// var dd = today.getDate();
+
+
