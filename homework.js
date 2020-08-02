@@ -1,9 +1,18 @@
 //var timeblock = loop to get ID
 function seeid(){
     $(".hour").each(function(){
-    if (time = )
-    $(this).attr("id")})
+        var stamp =$(this).attr("id")
+        var dt = new Date();
+        var time = Math.floor(dt.getHours())
+        if (stamp.toString() === time.toString()){
+            console.log(time)
+            console.log(stamp)
+        }   
+        
+    })   
 }
+
+seeid()
 
 
 //local storage
@@ -11,8 +20,8 @@ $("button").click(save)
 function save(){
     event.preventDefault
     var task = (event.target.previousElementSibling.value)
-    var time = (event.target.previousElementSibling.previousElementSibling.innerHTML)
-    localStorage.setItem(time,task)
+    var timebtn = (event.target.previousElementSibling.previousElementSibling.innerHTML)
+    localStorage.setItem(timebtn,task)
 }
 
 
@@ -24,7 +33,8 @@ $("#currentDay").text(moment().format('dddd')+", "+ moment().format('MMMM Do'));
 
 //Time formatting
  var dt = new Date();
- var time = dt.getHours()
+ var time = Math.floor(dt.getHours());
+ var timestring = time.toString()
 
 
 
