@@ -15,4 +15,4 @@ function save(){
     //ids for each row and pull /tags
     //styling
 
-console.log(event.target.)
+//console.log(event.target)
