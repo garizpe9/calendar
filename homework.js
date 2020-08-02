@@ -1,12 +1,17 @@
+//var timeblock = loop to get ID
+function seeid(){
+    $(".hour").each(function(){
+    if (time = )
+    $(this).attr("id")})
+}
+
+
+//local storage
 $("button").click(save)
 function save(){
     event.preventDefault
-    console.log(event)
-    console.log(event.target.offsetParent)
-    console.log(event.target.offsetParent.previousElementSibling.children[0].value)
-    console.log(event.target.parentElement.previousElementSibling.previousElementSibling.innerHTML)
-    var time =(event.target.parentElement.previousElementSibling.previousElementSibling.innerHTML)
-    var task =(event.target.offsetParent.previousElementSibling.children[0].value)
+    var task = (event.target.previousElementSibling.value)
+    var time = (event.target.previousElementSibling.previousElementSibling.innerHTML)
     localStorage.setItem(time,task)
 }
 
@@ -14,17 +19,16 @@ function save(){
 //figure out way to loop through rows or local storage to display to getItem from local storage as soon as it's loaded
     //ids for each row and pull /tags
     //styling
+//Time 
+$("#currentDay").text(moment().format('dddd')+", "+ moment().format('MMMM Do')); 
 
-$("#currentDay").text(moment().format('dddd')+", "+ moment().format('MMMM Do'));  
-
-// m = moment('2013-03-01', 'YYYY-MM-DD')
-// var dt = new Date();
-// var daytime = dt.getDay() + " " + dt.getMonth() + " " + dt.getDate();
-// var time = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
-// console.log(moment());
+//Time formatting
+ var dt = new Date();
+ var time = dt.getHours()
 
 
-console.log(moment)
+
+
 // var today = new Date();
 // var dd = today.getDate();
 
