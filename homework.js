@@ -5,14 +5,20 @@ function seeid(){
         var dt = new Date();
         var time = Math.floor(dt.getHours())
         if (stamp.toString() === time.toString()){
-            console.log(time)
-            console.log(stamp)
+            console.log(stamp);
+            console.log(time);
+            $(this.nextElementSibling).addClass("present");
+            
         }   
         
     })   
 }
 
 seeid()
+
+
+    
+
 
 
 //local storage
