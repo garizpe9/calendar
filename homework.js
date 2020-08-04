@@ -30,33 +30,7 @@ function save(){
     var timebtn = (event.target.previousElementSibling.previousElementSibling.innerHTML);
     localStorage.setItem(timebtn,task);    
 }
-
-function show (){
-   
-    
-    //$(".hour").each(function(){
-        //console.log($("#9").nextElementSibling.html())
-        //var gettime=$(this).html() //times from local storage
-        //var grab=($(this).nextElementSibling);
-        //$(textarea).text("this is a text");
-        //$(textarea).value=gettasks
-    //}
-    
-}
-
-// var task =$(".description").val()
-// var timebtn = $(".hour").html()
-
-
 $(".hour").each(function(){
     var bloop=($(this).html());
-    console.log($(this).next().val(localStorage.getItem(bloop)));
-    
+    ($(this).next().val(localStorage.getItem(bloop)));    
 })
-
-
-//hour()
-// var score = document.getElementById ("score");
-// scores.textContent = email + " : " + password  
-// jquery nextElementSibling?
-
