@@ -1,3 +1,8 @@
+//variables
+
+//Calendar time
+$("#currentDay").text(moment().format('dddd')+", "+ moment().format('MMMM Do')); 
+
 //var timeblock = loop to get ID
 function seeid(){
     $(".hour").each(function(){
@@ -5,47 +10,51 @@ function seeid(){
         var dt = new Date();
         var time = Math.floor(dt.getHours())
         if (stamp.toString() === time.toString()){
-            console.log(stamp);
-            console.log(time);
             $(this.nextElementSibling).addClass("present");
-            
-        }   
-        
+        }
+        if (stamp.toString() < time.toString()){
+            $(this.nextElementSibling).addClass("past");
+        }
+        if (stamp.toString() > time.toString()){
+            $(this.nextElementSibling).addClass("future");
+        }          
     })   
 }
-
 seeid()
-
-
-    
-
-
 
 //local storage
 $("button").click(save)
 function save(){
     event.preventDefault
-    var task = (event.target.previousElementSibling.value)
-    var timebtn = (event.target.previousElementSibling.previousElementSibling.innerHTML)
-    localStorage.setItem(timebtn,task)
+    var task = (event.target.previousElementSibling.value);
+    var timebtn = (event.target.previousElementSibling.previousElementSibling.innerHTML);
+    localStorage.setItem(timebtn,task);    
 }
 
+function show (){
+   
+    
+    //$(".hour").each(function(){
+        //console.log($("#9").nextElementSibling.html())
+        //var gettime=$(this).html() //times from local storage
+        //var grab=($(this).nextElementSibling);
+        //$(textarea).text("this is a text");
+        //$(textarea).value=gettasks
+    //}
+    
+}
 
-//figure out way to loop through rows or local storage to display to getItem from local storage as soon as it's loaded
-    //ids for each row and pull /tags
-    //styling
-//Time 
-$("#currentDay").text(moment().format('dddd')+", "+ moment().format('MMMM Do')); 
+// var task =$(".description").val()
+// var timebtn = $(".hour").html()
 
-//Time formatting
- var dt = new Date();
- var time = Math.floor(dt.getHours());
- var timestring = time.toString()
+$(".description").each(function(){
+    console.log($(this).val())
+})
 
+$(".hour").each(function(){
+    console.log($(this).html())
+    })
+    
 
-
-
-// var today = new Date();
-// var dd = today.getDate();
 
 
