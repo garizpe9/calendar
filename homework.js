@@ -9,13 +9,13 @@ function seeid(){
         var stamp =$(this).attr("id")
         var dt = new Date();
         var time = Math.floor(dt.getHours())
-        if (stamp.toString() === time.toString()){
+        if (parseInt(stamp) === parseInt(time)){
             $(this.nextElementSibling).addClass("present");
         }
-        if (stamp.toString() < time.toString()){
+        if (parseInt(stamp) < parseInt(time)){
             $(this.nextElementSibling).addClass("past");
         }
-        if (stamp.toString() > time.toString()){
+        if (parseInt(stamp) > parseInt(time)){
             $(this.nextElementSibling).addClass("future");
         }          
     })   
