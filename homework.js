@@ -47,14 +47,16 @@ function show (){
 // var task =$(".description").val()
 // var timebtn = $(".hour").html()
 
-$(".description").each(function(){
-    console.log($(this).val())
-})
 
 $(".hour").each(function(){
-    console.log($(this).html())
-    })
+    var bloop=($(this).html());
+    console.log($(this).next().val(localStorage.getItem(bloop)));
     
+})
 
 
+//hour()
+// var score = document.getElementById ("score");
+// scores.textContent = email + " : " + password  
+// jquery nextElementSibling?
 
